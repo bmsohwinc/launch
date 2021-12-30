@@ -13,13 +13,13 @@ export default function App() {
                 <nav>
                     <ul>
                         <li>
-                            <Link to="/launch">Home</Link>
+                            <Link to="home">Home</Link>
                         </li>
                         <li>
-                            <Link to="/launch/tic-tac-toe">tic-tac-toe</Link>
+                            <Link to="tic-tac-toe">tic-tac-toe</Link>
                         </li>
                         <li>
-                            <Link to="/launch/chess">chess</Link>
+                            <Link to="chess">chess</Link>
                         </li>
                     </ul>
                 </nav>
@@ -27,9 +27,9 @@ export default function App() {
                 {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
                 <Routes>
-                    <Route path="/launch" element={<Home />} />
-                    <Route path="/launch/tic-tac-toe" element={<TicTacToeGame />} />
-                    <Route path="/launch/chess" element={<ChessGame />} />
+                    <Route path="home" element={<Home />} />
+                    <Route path="tic-tac-toe" element={<TicTacToeGame />} />
+                    <Route path="chess" element={<ChessGame />} />
                 </Routes>
             </div>
     );
