@@ -1,6 +1,5 @@
 import React from "react";
 import {
-    BrowserRouter as Router,
     Routes,
     Route,
     Link
@@ -10,18 +9,17 @@ import TicTacToeGame from "./tic-tac-toe/TicTacToeGame";
 
 export default function App() {
     return (
-        <Router>
             <div>
                 <nav>
                     <ul>
                         <li>
-                            <Link to="/">Home</Link>
+                            <Link to="/launch">Home</Link>
                         </li>
                         <li>
-                            <Link to="/tic-tac-toe">tic-tac-toe</Link>
+                            <Link to="/launch/tic-tac-toe">tic-tac-toe</Link>
                         </li>
                         <li>
-                            <Link to="/chess">chess</Link>
+                            <Link to="/launch/chess">chess</Link>
                         </li>
                     </ul>
                 </nav>
@@ -29,13 +27,11 @@ export default function App() {
                 {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
                 <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/tic-tac-toe" element={<TicTacToeGame />} />
-                    <Route path="/chess" element={<ChessGame />} />
-
+                    <Route path="/launch" element={<Home />} />
+                    <Route path="/launch/tic-tac-toe" element={<TicTacToeGame />} />
+                    <Route path="/launch/chess" element={<ChessGame />} />
                 </Routes>
             </div>
-        </Router>
     );
 }
 
