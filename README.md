@@ -1,3 +1,19 @@
+# Notes
+
+## Setup
+1. For deploying to github pages, we need to `npm install gh-pages`
+2. Add some pre-deploy and deploy commands in the `package.json`
+3. Add a `homepage` entry in the `package.json`
+4. You can use the master branch itself for all sorts of commits
+6. But whenever you want to publish to GitHub, run `npm run deploy`
+    - Only then the app will be available
+    - You can see all the deployments in the activities section (eg., [launch deployments](https://github.com/bmsohwinc/launch/deployments/activity_log?environment=github-pages))
+7. You cannot use BrowserRouter in Github pages. Always use HashRouter.
+    - BrowserRouter will work temporarily in one session
+    - Once you refresh, that context of the path will be lost, thus `404` will be thrown
+
+---
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
