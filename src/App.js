@@ -5,6 +5,7 @@ import {
     Link
 } from "react-router-dom";
 import ChessGame from "./chess/ChessGame";
+import MontyHallGame from "./monty-hall/MontyHallGame";
 import TicTacToeGame from "./tic-tac-toe/TicTacToeGame";
 
 export default function App() {
@@ -21,6 +22,9 @@ export default function App() {
                         <li>
                             <Link to="chess">chess</Link>
                         </li>
+                        <li>
+                            <Link to="monty-hall">monty-hall</Link>
+                        </li>
                     </ul>
                 </nav>
 
@@ -30,6 +34,7 @@ export default function App() {
                     <Route path="home" element={<Home />} />
                     <Route path="tic-tac-toe" element={<TicTacToeGame />} />
                     <Route path="chess" element={<ChessGame />} />
+                    <Route path="monty-hall" element={<MontyHallGame/>} />
                 </Routes>
             </div>
     );
